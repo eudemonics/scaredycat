@@ -454,6 +454,12 @@ class ExploitServer(object):
 
    exploit_file = None
    exploit_count = 0
+   
+   from subprocess import Popen, PIPE, STDOUT
+   output = Popen("ifconfig | sed -ne 's/^.*inet //;s/ netmask.*$//p' | grep -v -m 1 127.0.0.1", shell=True, stdout=PIPE, stderr=STDOUT, stdin=PIPE)
+   localip = output.communicate()[0].strip()
+   
+   print('\n** ON LOCAL NETWORK, URL IS: http://%s:8080 ** \n\n' % localip)
 
    @cherrypy.expose
    def index(self):
