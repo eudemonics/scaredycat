@@ -14,11 +14,11 @@ published by Exodus Intelligence.
 ####** usage: scaredycat.py [-h] [-p PAYLOAD] [-v] [libcfile]
 
 optional arguments:
-  libcfile              path to libc.so file (usually in /system/lib on
-                        android devices). one is included in the repo.
-  -h, --help            show this help message and exit
-  -p PAYLOAD, --payload PAYLOAD
-                        path to shellcode/payload to be injected into mp4 file.
-                        a generic one created by meterpreter is included.
-  -v, --version         scaredycat.py version 0.1 beta, by vvn (eudemonics).
-                        released 12/8/2015.
+
+    libcfile              path to libc.so file (usually in /system/lib on
+                          android devices). one is included in the repo.
+    -h, --help            show this help message and exit
+    -p PAYLOAD, --payload PAYLOAD
+                          path to shellcode/payload to be injected into mp4 file.
+                          a generic one created by meterpreter is included.
+    -v, --version         version information
